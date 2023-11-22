@@ -1,0 +1,10 @@
+OrderedCollection [
+	SquotTonelMapper {
+		#package : MCPackage {
+			#name : 'WorldViewerTest123'
+		},
+		#path : FSAbsolutePath [
+			'src'
+		]
+	}
+]
