@@ -1,4 +1,4 @@
 Package {
-	#'squeak_changestamp' : true,
-	#name : #WorldViewerTest123
+	#name : #WorldViewerTest123,
+	#'squeak_changestamp' : true
 }

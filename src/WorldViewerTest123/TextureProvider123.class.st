@@ -8,7 +8,7 @@ Class {
 }
 
 {
-	#category : #'as yet unclassified',
+	#category : #'instance creation',
 	#'squeak_changestamp' : 'JS 11/21/2023 16:36'
 }
 TextureProvider123 class >> new: aWorldMapProvider [

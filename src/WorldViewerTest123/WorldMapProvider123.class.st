@@ -5,7 +5,7 @@ Class {
 }
 
 {
-	#category : #'as yet unclassified',
+	#category : #'world map info',
 	#'squeak_changestamp' : 'JS 11/22/2023 09:14'
 }
 WorldMapProvider123 >> at: pos [
@@ -13,7 +13,7 @@ WorldMapProvider123 >> at: pos [
 ]
 
 {
-	#category : #'as yet unclassified',
+	#category : #'world map info',
 	#'squeak_changestamp' : 'JS 11/22/2023 09:15'
 }
 WorldMapProvider123 >> atX: x Y: y [
@@ -21,7 +21,7 @@ WorldMapProvider123 >> atX: x Y: y [
 ]
 
 {
-	#category : #'as yet unclassified',
+	#category : #testing,
 	#'squeak_changestamp' : 'JS 11/21/2023 16:43'
 }
 WorldMapProvider123 >> isWorldMapProvider [
