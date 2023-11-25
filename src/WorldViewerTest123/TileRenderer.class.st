@@ -40,8 +40,9 @@ TileRenderer >> setX: xi Y: yi [
 
 {
 	#category : #'as yet unclassified',
-	#'squeak_changestamp' : 'JPVS 11/25/2023 20:53'
+	#'squeak_changestamp' : 'JPVS 11/26/2023 00:24'
 }
 TileRenderer >> updatePosition [
+	self extent: (self owner tileSize)@(self owner tileSize).
 	self topLeft: (self owner topLeft + ((x@y) - (self owner cameraPosition \\ 1) * self owner tileSize)).
 ]

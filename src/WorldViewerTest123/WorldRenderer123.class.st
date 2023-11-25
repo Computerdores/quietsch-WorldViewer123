@@ -26,12 +26,12 @@ WorldRenderer123 >> cameraPosition [
 
 {
 	#category : #'instance creation',
-	#'squeak_changestamp' : 'JPVS 11/25/2023 23:57'
+	#'squeak_changestamp' : 'JPVS 11/26/2023 00:19'
 }
 WorldRenderer123 >> createTiles [
 	| xcount ycount t |
-	xcount := ((self bounds extent x) / tileSize) floor + 1.
-	ycount := ((self bounds extent y) / tileSize) floor + 1.
+	xcount := ((self bounds extent x) / tileSize) floor + 2.
+	ycount := ((self bounds extent y) / tileSize) floor + 2.
 	0 to: (xcount-1) do: [:x |
 		0 to: (ycount)-1 do: [:y |
 			t := TileRenderer new.
