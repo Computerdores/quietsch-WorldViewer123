@@ -5,7 +5,7 @@ Class {
 }
 
 {
-	#category : #'world map info',
+	#category : #accessing,
 	#'squeak_changestamp' : 'JS 11/22/2023 09:14'
 }
 WorldMapProvider123 >> at: pos [
@@ -13,7 +13,7 @@ WorldMapProvider123 >> at: pos [
 ]
 
 {
-	#category : #'world map info',
+	#category : #accessing,
 	#'squeak_changestamp' : 'JS 11/23/2023 21:36'
 }
 WorldMapProvider123 >> atX: x Y: y [
