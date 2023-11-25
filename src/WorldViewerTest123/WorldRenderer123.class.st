@@ -2,10 +2,19 @@ Class {
 	#name : #WorldRenderer123,
 	#superclass : #Morph,
 	#instVars : [
-		'cameraPosition'
+		'cameraPosition',
+		'tileSize'
 	],
 	#category : #WorldViewerTest123
 }
+
+{
+	#category : #'as yet unclassified',
+	#'squeak_changestamp' : 'JPVS 11/25/2023 23:57'
+}
+WorldRenderer123 class >> withSize: size tileSize: tileSize [
+	^ self new initSize: size tileSize: tileSize
+]
 
 {
 	#category : #accessing,
@@ -17,13 +26,12 @@ WorldRenderer123 >> cameraPosition [
 
 {
 	#category : #'instance creation',
-	#'squeak_changestamp' : 'JPVS 11/25/2023 22:51'
+	#'squeak_changestamp' : 'JPVS 11/25/2023 23:57'
 }
 WorldRenderer123 >> createTiles [
 	| xcount ycount t |
-	self updateBounds.
-	xcount := ((self owner bounds extent x) / (self owner tileSize)) floor + 1.
-	ycount := ((self owner bounds extent y) / (self owner tileSize)) floor + 1.
+	xcount := ((self bounds extent x) / tileSize) floor + 1.
+	ycount := ((self bounds extent y) / tileSize) floor + 1.
 	0 to: (xcount-1) do: [:x |
 		0 to: (ycount)-1 do: [:y |
 			t := TileRenderer new.
@@ -44,6 +52,17 @@ WorldRenderer123 >> drawOn: aCanvas [
 
 {
 	#category : #'instance creation',
+	#'squeak_changestamp' : 'JPVS 11/26/2023 00:01'
+}
+WorldRenderer123 >> initSize: size tileSize: tilesize [
+	tileSize := tilesize.
+	self extent: size.
+	self center: (World center).
+	self createTiles.
+]
+
+{
+	#category : #'instance creation',
 	#'squeak_changestamp' : 'JPVS 11/25/2023 20:44'
 }
 WorldRenderer123 >> initialize [
@@ -55,16 +74,8 @@ WorldRenderer123 >> initialize [
 
 {
 	#category : #accessing,
-	#'squeak_changestamp' : 'JPVS 11/25/2023 19:31'
+	#'squeak_changestamp' : 'JPVS 11/25/2023 23:58'
 }
 WorldRenderer123 >> tileSize [
-	^self owner tileSize
-]
-
-{
-	#category : #'instance creation',
-	#'squeak_changestamp' : 'JS 11/21/2023 13:25'
-}
-WorldRenderer123 >> updateBounds [
-	self bounds: (self owner bounds)
+	^tileSize
 ]

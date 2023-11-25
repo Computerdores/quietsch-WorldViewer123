@@ -1,6 +1,6 @@
 Class {
 	#name : #WorldViewer123,
-	#superclass : #Morph,
+	#superclass : #Object,
 	#instVars : [
 		'worldRenderer',
 		'resolution',
@@ -10,39 +10,17 @@ Class {
 }
 
 {
-	#category : #drawing,
-	#'squeak_changestamp' : 'JPVS 11/25/2023 21:52'
-}
-WorldViewer123 >> drawOn: aCanvas [
-]
-
-{
 	#category : #initialization,
-	#'squeak_changestamp' : 'JPVS 11/25/2023 16:30'
+	#'squeak_changestamp' : 'JPVS 11/26/2023 00:04'
 }
 WorldViewer123 >> initialize [
 	super initialize.
 	"init vars"
 	resolution := 1600@900.
 	tileSize := 128.
-	"init self"
-	self clipSubmorphs: true.
-	self bounds: (Rectangle center: (World center) extent: resolution).
-	self color: Color black.
 	"init worldRenderer"
-	worldRenderer := WorldRenderer123 new.
- 	self addMorph: worldRenderer.
-	worldRenderer createTiles.
-	"show self"
-	self openInWorld
-]
-
-{
-	#category : #accessing,
-	#'squeak_changestamp' : 'JPVS 11/25/2023 16:34'
-}
-WorldViewer123 >> tileSize [
-	^ tileSize
+	worldRenderer := WorldRenderer123 withSize: resolution tileSize: tileSize.
+	worldRenderer openInWorld
 ]
 
 {
