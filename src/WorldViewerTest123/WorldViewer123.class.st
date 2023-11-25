@@ -11,11 +11,9 @@ Class {
 
 {
 	#category : #drawing,
-	#'squeak_changestamp' : 'JPVS 11/25/2023 15:51'
+	#'squeak_changestamp' : 'JPVS 11/25/2023 21:52'
 }
 WorldViewer123 >> drawOn: aCanvas [
-	aCanvas fillRectangle: (self bounds) color: (self color).
-	aCanvas drawMorph: worldRenderer
 ]
 
 {
