@@ -15,10 +15,11 @@ WorldRenderer123 >> drawOn: aCanvas [
 
 {
 	#category : #'instance creation',
-	#'squeak_changestamp' : 'JS 11/21/2023 13:11'
+	#'squeak_changestamp' : 'JPVS 11/25/2023 11:17'
 }
 WorldRenderer123 >> initialize [
 	super initialize.
+	self clipSubmorphs: true.
 	
 ]
 
