@@ -6,10 +6,10 @@ Class {
 
 {
 	#category : #accessing,
-	#'squeak_changestamp' : 'JS 11/22/2023 09:14'
+	#'squeak_changestamp' : 'JPVS 11/26/2023 12:04'
 }
 WorldMapProvider123 >> at: pos [
-	^ (pos x \\ 2) == (pos y \\ 2) ifTrue: 1 ifFalse: 0
+	^ self circle: pos
 ]
 
 {
@@ -18,6 +18,22 @@ WorldMapProvider123 >> at: pos [
 }
 WorldMapProvider123 >> atX: x Y: y [
 	^  self at: x@y
+]
+
+{
+	#category : #'as yet unclassified',
+	#'squeak_changestamp' : 'JPVS 11/26/2023 12:02'
+}
+WorldMapProvider123 >> checkerBoard: pos [
+	^ (pos x \\ 2) == (pos y \\ 2) ifTrue: 1 ifFalse: 0
+]
+
+{
+	#category : #'as yet unclassified',
+	#'squeak_changestamp' : 'JPVS 11/26/2023 12:05'
+}
+WorldMapProvider123 >> circle: pos [
+	^ (((pos x ** 2) + (pos y ** 2)) < (5 ** 2)) ifTrue: 1 ifFalse: 0
 ]
 
 {
