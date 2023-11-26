@@ -53,14 +53,14 @@ TextureProvider123 >> initialize [
 
 {
 	#category : #'instance creation',
-	#'squeak_changestamp' : 'JS 11/23/2023 21:31'
+	#'squeak_changestamp' : 'JPVS 11/26/2023 11:29'
 }
 TextureProvider123 >> initialize: aWorldMapProvider [
 	((aWorldMapProvider respondsTo: #isWorldMapProvider) and: [aWorldMapProvider isWorldMapProvider]) ifFalse: [self error: 'TextureProvider123 initialize: expects a WorldMapProvider']. 
 	worldMapProvider := aWorldMapProvider.
 	textures := Dictionary new.
 	"init asset loader"
-	loader := GitAssetLoader for: 'WorldViewer123'.
+	loader := GitAssetLoader for: 'quietsch-WorldViewer123'.
 	loader basePath: 'assets'.
 	"initialize texture paths"
 	paths := Dictionary new.
